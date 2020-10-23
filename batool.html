@@ -1,0 +1,93 @@
+<html>
+    <style>
+.container{
+    width: 800px;
+    height: 350px;
+    border: 5px solid green;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+    position: relative;
+
+}
+
+
+ </style>
+ <body>
+    <div style="margin: auto; width: 800px; height: 300px;">
+    <img id="myimage"src= 'https://jooinn.com/images/red-daisy-6.jpg' style="width: 800px; height: 300px; align-items: center;">  </div>   
+    <div class="container">
+    <div class="selectdiv" style=" position: absolute; top:10px; right: 10px;">
+   
+        <select>
+                <option> english </option>
+                <option>arabic</option>
+               
+        </select>
+    </div>
+     
+      
+ <div class="top"><h1> log in to your account</h1> 
+    <input type="text" id="name" name="name" placeholder="name" style="width: 300px;"> <br> <br>
+    <div id="name_err"></div>
+    <input type="text" id="email" name="email" placeholder="email" style="width: 300px;"> <br> <br>
+    <div id="email_err"></div>
+    <input type="password" id="pass" name="password" placeholder="*****" style="width: 300px;"> <br> <br>
+    <div id="pass_err"></div>
+    <div class="one" ><input type="checkbox" id="password" name="password" value="keep me loggen on to 30day">
+    <label for="password">keep me loggen on to 30day </label></div>
+    <div class="two"><p> <a href="https://www.google.com/" target="blank" > forget password? </a></p>
+       
+ 
+    </div>
+
+<button type="button" style="background-color:darkcyan; width: 100px;" onclick="myFunction()">
+<a onclick="myFunction()" href="#" id="log" style="text-decoration: none;background-color:darkcyan; color: white; width: 300px; height: 30px;">register </a> </button>
+</div>
+
+    </body>
+
+    <script>
+        
+        var x= document.getElementById("myimage"),
+        
+         images = [
+         'https://pixnio.com/free-images/flora-plants/flowers/pink-flower.jpg',
+         'https://live.staticflickr.com/8239/8661607161_544ed993dd_b.jpg',
+         'https://www.hdnicewallpapers.com/Walls/Big/Flowers/White_Flower_Wallpaper.jpg',
+        
+        ]
+     
+         setInterval(function() {
+         var myRrandomNum = Math.floor(Math.random()*images.length);
+             console.log("interval")
+             x.src= images[myRrandomNum];
+             }, 1000);
+
+         function myFunction() {
+    var name=document.getElementById("name").value;
+    var email=document.getElementById("email").value;
+    var pass=document.getElementById("pass").value;
+    localStorage.setItem("name", name)
+    localStorage.setItem("email", email)
+    localStorage.setItem("pass", pass)
+    localStorage.setItem("date-hours", new Date().getHours())
+    localStorage.setItem("date-minutes", new Date().getMinutes())
+
+    localStorage.setItem("date-year", new Date().getUTCFullYear())
+
+
+
+    
+    localStorage.setItem("post", "💕💕الحب لا يصنع المعجزات.. إنه معجزة بحد ذاته.. في زمن تلاشت فيه مشاعر الصدق والثقة")
+
+    y=document.getElementById("log").href= "beto.html";
+
+    }
+        
+     
+
+     </script>
+
+</html>
